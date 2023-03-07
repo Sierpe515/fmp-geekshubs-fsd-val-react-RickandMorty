@@ -7,8 +7,8 @@ export const Home = () => {
     return (
         <>
         <Navbar1/>
+        <h1>Rick and Morty: Characters</h1>
         <CardPj/>
-        <h1>Rick and Morty</h1>
         </>
     )
 }
