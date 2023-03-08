@@ -1,18 +1,23 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import Jerry from '../img/5.jpeg'
+import '../componentes/CardPj.css'
 
-export const CardPj = () => {
+export const CardPj = ({pj}) => {
   return (
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={Jerry}/>
+      <Card.Img variant="top" src={ pj.image }/>
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
+        <Card.Title>{ pj.name }</Card.Title>
         <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          Status: { pj.status }
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Card.Text>
+          Species: { pj.species }
+        </Card.Text>
+        <Card.Text>
+          Id: { pj.id }
+        </Card.Text>
+        <Button variant="primary">Ver más</Button>
       </Card.Body>
     </Card>
   )
