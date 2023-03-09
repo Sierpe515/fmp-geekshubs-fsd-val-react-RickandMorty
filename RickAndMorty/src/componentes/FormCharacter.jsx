@@ -4,17 +4,17 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 
-export const FormGrid = () => {
+export const FormCharacter = () => {
 
   let user = {
     name: "",
-    surname: "",
-    email: "",
-    password: ""
+    status: "",
+    species: "",
+    id: ""
   }
 
   const [valor, setValor] = useState(user);
-  const {name, surname, email, password} = valor;
+  const {name, status, species, id} = valor;
 
   const newValue = ({target})=>{
     console.log(valor);
@@ -36,24 +36,24 @@ const checkValue = (event)=>{
       <Row className="mb-3">
         <Form.Group as={Col} controlId="formGridName">
           <Form.Label>Name</Form.Label>
-          <Form.Control type="text" placeholder="Enter name" name="name" value={name} onChange={newValue} />
+          <Form.Control type="text" placeholder="Enter email" name="name" value={name} onChange={newValue} />
         </Form.Group>
 
-        <Form.Group as={Col} controlId="formGridSurname">
-          <Form.Label>Surname</Form.Label>
-          <Form.Control type="text" placeholder="Enter surname" name="surname" value={surname} onChange={newValue} />
+        <Form.Group as={Col} controlId="formGridStatus">
+          <Form.Label>Status</Form.Label>
+          <Form.Control type="text" placeholder="Enter status" name="status" value={status} onChange={newValue} />
         </Form.Group>
       </Row>
 
       <Row className="mb-3">
-        <Form.Group as={Col} controlId="formGridEmail">
-          <Form.Label>Email</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" name="email" value={email} onChange={newValue} />
+        <Form.Group as={Col} controlId="formGridSpecies">
+          <Form.Label>Species</Form.Label>
+          <Form.Control type="text" placeholder="Enter species" name="species" value={species} onChange={newValue} />
         </Form.Group>
 
-        <Form.Group as={Col} controlId="formGridPassword">
+        <Form.Group as={Col} controlId="formGridId">
           <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" name="password" value={password} onChange={newValue} />
+          <Form.Control type="text" placeholder="Enter id" name="id" value={id} onChange={newValue} />
         </Form.Group>
       </Row>
 

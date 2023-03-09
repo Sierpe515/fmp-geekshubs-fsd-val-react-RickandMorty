@@ -11,9 +11,9 @@ import './Home.css'
 export const Home = () => {
     return (
         <Container fluid className="homeContainer">
-            <Row>
+            {/* <Row>
                 <Navbar1/>
-            </Row>
+            </Row> */}
             {/* <h1>Rick and Morty: Characters</h1> */}
             <Row>
                 <h1>Rick & Morty APP</h1>
